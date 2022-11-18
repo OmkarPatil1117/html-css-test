@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            background-color: black;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        h1 {
+            color: white;
+            font-size: 10rem;
+        }
+        .circle {
+            background-image: linear-gradient(red, aqua, green, blue);
+            height: 15rem;
+            width: 15rem;
+            border-radius: 50%;
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            animation-name: rotate;
+            animation-duration: 12s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes rotate {
+            0% {
+                top: 1rem;
+                left: 1rem;
+                transform: rotate(0deg);
+            }
+            10% {
+                top: 1rem;
+                left: 80%;
+                transform: rotate(360deg);
+            }
+            30% {
+                top: 34rem;
+                right: 10rem;
+                transform: rotate(-360deg);
+            }
+            60% {
+                top: 34rem;
+                right: 90rem;
+                transform: rotate(-960deg);
+            }
+            100% {
+                transform: rotate(-360deg);
+            }
+        }
+
+        @media screen and (max-width:778px) {
+            h1 {
+                font-size: 3rem;
+            }
+            .circle {
+                height: 9rem;
+                width: 9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello World</h1>
+    </div>
+    <div class="circle">
+
+    </div>
+</body>
+</html>
